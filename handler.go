@@ -60,6 +60,8 @@ var Lists = map[string][]string{}
 var ListsMu = sync.RWMutex{}
 var Sets = map[string]map[string]struct{}{} //Sets and SetsMu are for set data structure
 var SetsMu = sync.RWMutex{}
+var PubSub = map[string][]chan Value{}
+var PubSubMu = sync.RWMutex{}
 
 // helper
 func isExpired(key string) bool {
